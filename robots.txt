@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://drivemadunblockedgames.github.io/sitemap.xml
+Sitemap: https://stickdefendersunblocked.github.io/sitemap.xml
