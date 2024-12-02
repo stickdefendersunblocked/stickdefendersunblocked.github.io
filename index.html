@@ -32,6 +32,16 @@
           --theme-color: #6325db !important;
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8F1CFJ4RTE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8F1CFJ4RTE');
+    </script>
+  </head>
   <body class="scroll">
     <div class="content">
       <header class="header fixed">
@@ -122,8 +132,28 @@
       </section>
       <button id="back-to-top" title="Back to top" aria-hidden="true">↑</button> <div class="loading_mask hidden-load"> <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 100 100"> <g transform="translate(50 50)"> <g transform="scale(0.794652 0.794652)"> <animateTransform attributeName="transform" type="scale" calcMode="spline" values="0.8;0.5;0.8" keyTimes="0;0.5;1" dur="1.5s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"> </animateTransform> <rect x="-45" y="-45" width="90" height="90" fill="#ffffcb" stroke="#ff7c81" stroke-width="8" rx="5.55556" transform="rotate(4.81284)"> <animate attributeName="rx" calcMode="linear" values="0;50;0" keyTimes="0;0.5;1" dur="1.5" begin="0s" repeatCount="indefinite"></animate> <animate attributeName="stroke-width" calcMode="linear" values="8;24;8" keyTimes="0;0.5;1" dur="1.5" begin="0s" repeatCount="indefinite"></animate> <animateTransform attributeName="transform" type="rotate" calcMode="spline" values="0 0 0;270 0 0;540 0 0" keyTimes="0;0.5;1" dur="1.5s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"> </animateTransform> </rect> </g> </g> </svg> </div>
       <!-- <script src="./assert/js/bootstrap.bundle.min.js"></script> -->
-      <script src="./assert/js/jquery-3.4.1.min.js"></script>
-      <script src="./assert/js/script.js"></script>
+      <!-- <script src="./assert/js/jquery-3.4.1.min.js"></script> -->
+      <!-- <script src="./assert/js/script.js"></script> -->
     </div>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTopButton = document.getElementById('back-to-top');
+      if (!backToTopButton) return;
+      backToTopButton.style.display = 'none';
+      window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 200) {
+              backToTopButton.style.display = 'block';
+          } else {
+              backToTopButton.style.display = 'none';
+          }
+      });
+      backToTopButton.addEventListener('click', function() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
+    });
+  </script>
 </html>
