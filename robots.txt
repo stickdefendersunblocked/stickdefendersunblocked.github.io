@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://stickdefendersunblocked.github.io/sitemap.txt
