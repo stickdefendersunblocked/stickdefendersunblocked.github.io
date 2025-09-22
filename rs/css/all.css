@@ -579,13 +579,14 @@ header {
 }
 
 .logo-text {
-    color: #0f172a;
-    text-shadow: none;
+    color: #fff;
+    text-shadow: 0 0 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     letter-spacing: 2px;
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-weight: 800;
-    filter: none;
+    font-weight: bold;
+    /* filter: drop-shadow(0 0 1px #0457a7) drop-shadow(1px 1px 0 #0457a7) drop-shadow(-1px 1px 0 #0457a7) drop-shadow(1px -1px 0 #0457a7)drop-shadow(-1px -1px 0 #0457a7); */
+    filter: drop-shadow(0 0 3px #0457a7) drop-shadow(3px 3px 0 #0457a7) drop-shadow(-3px 3px 0 #0457a7) drop-shadow(3px -3px 0 #0457a7)drop-shadow(-3px -3px 0 #0457a7);
 }
 
 .navigation>ul {
@@ -598,9 +599,9 @@ header {
 }
 
 .menu-link {
-    color: #0f172a;
+    color: #fff;
     font-weight: 700;
-    text-shadow: none;
+    text-shadow: 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413, 0 0 4px #941413;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 18px;
@@ -614,10 +615,8 @@ header {
     cursor: pointer;
 }
 
-.menu-link:hover,
-.menu-link:focus {
-    background-color: rgba(15, 23, 42, 0.12);
-    color: #0f172a;
+.menu-link:hover {
+    background-color: #941413;
 }
 
 .search-desktop {
@@ -855,81 +854,33 @@ header {
     z-index: 10;
 }
 
+.text-area h2, .text-area h3, .text-area h4 {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
 .text-area {
     max-width: 100%;
     overflow: hidden;
     text-overflow: clip;
-    line-height: 1.75;
-    background: #f8fafc;
-    color: #0f172a;
-    padding: 2rem;
-    border-radius: 18px;
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
-    border: 1px solid rgba(226, 232, 240, 0.65);
+    line-height: 2;
 }
 
-.text-area h2,
-.text-area h3,
-.text-area h4 {
-    text-transform: none;
-    font-weight: 700;
-    color: #0f172a;
-    font-family: 'Nunito Sans', sans-serif;
-    margin-top: 1.75rem;
-    margin-bottom: 0.75rem;
+.text-area ul, .text-area ol {
+    padding-left: 40px;
 }
 
-.text-area h2:first-child {
-    margin-top: 0;
-}
-
-.text-area p,
-.text-area li {
-    color: #334155;
-}
-
-.text-area ul,
-.text-area ol {
-    padding-left: 1.25rem;
-    margin-bottom: 1.25rem;
-}
-
-.text-area ul {
+.text-area ul, .text-area ol, .text-area li {
     list-style: disc;
 }
 
-.text-area ol {
-    list-style: decimal;
-}
-
-.text-area li + li {
-    margin-top: 0.5rem;
-}
-
-.text-area h1,
-.text-area h2,
-.text-area h3,
-.text-area h4,
-.text-area h5,
-.text-area h6 {
-    font-weight: 700;
-    font-family: 'Nunito Sans', sans-serif;
+.text-area h1, .text-area h2, .text-area h3, .text-areah4, .text-area h5, .text-area h6 {
+    font-weight: bold;
+    font-family: Righteous;
 }
 
 .text-area a {
-    color: #1d4ed8;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.text-area a:hover,
-.text-area a:focus {
-    color: #1e40af;
-}
-
-#content-container {
-    max-width: 780px;
-    margin: 0 auto;
+    color: #fdfe03;
 }
 
 .sticker {
@@ -985,50 +936,6 @@ header {
 
 .overwrite-breadcumb .bread-after:last-child {
     cursor: unset;
-}
-
-.breadcrumb-trail {
-    width: 100%;
-}
-
-.breadcrumb-trail ol {
-    list-style: none;
-    margin: 0 0 1.5rem;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.breadcrumb-trail li {
-    display: flex;
-    align-items: center;
-    font-size: 0.95rem;
-    color: #e2e8f0;
-}
-
-.breadcrumb-trail li + li::before {
-    content: "/";
-    margin-right: 0.5rem;
-    color: #cbd5f5;
-}
-
-.breadcrumb-trail a {
-    color: #38bdf8;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.breadcrumb-trail a:hover,
-.breadcrumb-trail a:focus {
-    color: #f8fafc;
-    text-decoration: underline;
-}
-
-.breadcrumb-trail li[aria-current="page"] {
-    font-weight: 700;
-    color: #f8fafc;
 }
 
 .header-game {
