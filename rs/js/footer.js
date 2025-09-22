@@ -1,11 +1,51 @@
 $(document).ready(function () {
-	$(".icon-menu-mobile").on('click', function () {
-		$(".mobile-dropdown").slideToggle();
-	})
-	async function logJSONData() {
-		const response = await fetch("data/config.json");
-		const jsonData = await response.json();
-		renderHtmlConfig(jsonData);
+        $(".icon-menu-mobile").on('click', function () {
+                $(".mobile-dropdown").slideToggle();
+        });
+
+        const footer = document.querySelector('footer');
+        if (footer && !footer.querySelector('.site-footer')) {
+                footer.insertAdjacentHTML('afterbegin', `
+        <div class="site-footer">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <a class="footer-logo" href="/">StickDefendersUnblocked</a>
+              <p class="footer-text">Play classroom-safe browser games without downloads and discover new unblocked hits every week.</p>
+            </div>
+            <div class="footer-column">
+              <h2>Popular Categories</h2>
+              <ul>
+                <li><a href="/categogy/New.html">New Releases</a></li>
+                <li><a href="/categogy/Car.html">Racing Games</a></li>
+                <li><a href="/categogy/Shotting.html">Shooting Games</a></li>
+                <li><a href="/categogy/Sport.html">Sports Games</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h2>Player Resources</h2>
+              <ul>
+                <li><a href="/sitemap.xml">XML Sitemap</a></li>
+                <li><a href="/sitemap.txt">Plain Sitemap</a></li>
+                <li><a href="/robots.txt">Robots.txt</a></li>
+                <li><a href="https://github.com/stickdefendersunblocked/stickdefendersunblocked.github.io/issues" target="_blank" rel="noopener">Request a Game</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h2>Stay Updated</h2>
+              <p class="footer-text">Bookmark this hub or follow our GitHub project to get notified when new unblocked games go live.</p>
+              <a class="footer-cta" href="https://github.com/stickdefendersunblocked/stickdefendersunblocked.github.io" target="_blank" rel="noopener">Follow on GitHub</a>
+            </div>
+          </div>
+          <div class="footer-meta">
+            <p>© 2025 StickDefendersUnblocked. Curated browser games for students and office breaks.</p>
+          </div>
+        </div>
+        `);
+        }
+        async function logJSONData() {
+                const response = await fetch("data/config.json");
+                const jsonData = await response.json();
+                renderHtmlConfig(jsonData);
 	}
 	// logJSONData();
 })
