@@ -1,1 +1,2 @@
 google.com, pub-5130254389782226, DIRECT, f08c47fec0942fa0
+# Add new advertising partners below using "domain, publisher_id, relationship, certification_id"

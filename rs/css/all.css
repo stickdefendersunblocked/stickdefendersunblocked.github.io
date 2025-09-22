@@ -1144,6 +1144,192 @@ header {
     }
 }
 
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.content-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.content-grid section {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.content-grid h3,
+.content-grid h4,
+.faq-block h3 {
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.content-grid ol,
+.content-grid ul {
+    margin-left: 1.2rem;
+    color: #1f2937;
+    line-height: 1.65;
+}
+
+.content-grid li + li {
+    margin-top: 0.65rem;
+}
+
+.faq-block {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+}
+
+.faq-block details {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.85rem 0;
+}
+
+.faq-block details:last-of-type {
+    border-bottom: none;
+}
+
+.faq-block summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #0f172a;
+    outline: none;
+}
+
+.faq-block summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-block summary::after {
+    content: '+';
+    float: right;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.faq-block details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-block p {
+    margin-top: 0.75rem;
+    color: #334155;
+}
+
+.faq-block details[open] {
+    background: #f1f5f9;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+}
+
+.faq-block details[open] p {
+    margin-bottom: 0;
+}
+
+.site-footer {
+    background: #0f172a;
+    color: #e2e8f0;
+    margin-top: 3rem;
+    padding: 3rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-column h2 {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #f8fafc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li + li {
+    margin-top: 0.5rem;
+}
+
+.footer-column a {
+    color: #cbd5f5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover,
+.footer-column a:focus {
+    color: #38bdf8;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #38bdf8;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.footer-text {
+    color: #cbd5f5;
+    line-height: 1.6;
+    margin: 0 0 0.75rem;
+}
+
+.footer-cta {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #38bdf8, #22d3ee);
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-cta:hover,
+.footer-cta:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(56, 189, 248, 0.35);
+}
+
+.footer-meta {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    padding: 0 1.5rem;
+}
+
 @media (max-width: 999px) {
     .throw-ads-320x90 {
         display: block;
@@ -1156,6 +1342,15 @@ header {
     #iframehtml5 {
         height: 487px;
     }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .content-grid section {
+        padding: 1.25rem;
+    }
 }
 
 @media (max-width: 799px) {
@@ -1163,6 +1358,19 @@ header {
 
     .game-flex {
         justify-content: center;
+    }
+
+    .footer-grid {
+        gap: 1.75rem;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column ul li {
+        display: inline-block;
+        margin: 0.35rem 0.6rem;
     }
 }
 
