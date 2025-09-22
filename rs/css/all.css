@@ -1147,7 +1147,7 @@ header {
 .lead {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1.5rem;
 }
 
@@ -1182,7 +1182,7 @@ header {
 .content-grid ol,
 .content-grid ul {
     margin-left: 1.2rem;
-    color: #1f2937;
+    color: #e2e8f0;
     line-height: 1.65;
 }
 
