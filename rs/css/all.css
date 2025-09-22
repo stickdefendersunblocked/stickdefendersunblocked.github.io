@@ -1147,7 +1147,7 @@ header {
 .lead {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: #e2e8f0;
+    color: #0f172a;
     margin-bottom: 1.5rem;
 }
 
@@ -1182,7 +1182,7 @@ header {
 .content-grid ol,
 .content-grid ul {
     margin-left: 1.2rem;
-    color: #e2e8f0;
+    color: #0f172a;
     line-height: 1.65;
 }
 
@@ -1192,7 +1192,7 @@ header {
 
 .faq-block {
     background: #fff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #0f172a;
     border-radius: 18px;
     padding: 1.5rem 1.75rem;
     margin-bottom: 2.5rem;
@@ -1200,7 +1200,7 @@ header {
 }
 
 .faq-block details {
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #0f172a;
     padding: 0.85rem 0;
 }
 
@@ -1247,7 +1247,7 @@ header {
 
 .site-footer {
     background: #0f172a;
-    color: #e2e8f0;
+    color: #0f172a;
     margin-top: 3rem;
     padding: 3rem 0 2rem;
 }
