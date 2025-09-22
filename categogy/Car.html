@@ -12,25 +12,11 @@
     <meta name="distribution" content="Global" />
     <meta http-equiv="audience" content="General" />
     <link rel="icon" href="https://stickdefendersunblocked.github.io/favicon.png" />
-    <title>Car & Racing Games - StickDefendersUnblocked</title>
-        <meta name="keywords" content="car games, racing games, driving games, unblocked" />
-        <meta name="news_keywords" content="car games, racing games, driving games, unblocked" />
-        <meta name="description" content="Take the wheel in our collection of unblocked car and racing games featuring drifts, stunts, and speed trials you can play anywhere." />
+    <title>Car games</title>
+    <meta name="keywords" content="Car games" />
+    <meta name="news_keywords" content="Car games" />
+    <meta name="description" content="Car games - MathsFrame" />
     <link rel="stylesheet" type="text/css" href="/rs/css/all.css" />
-    <link rel="canonical" href="https://stickdefendersunblocked.github.io/categogy/Car.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="StickDefendersUnblocked" />
-    <meta property="og:title" content="Car & Racing Games - StickDefendersUnblocked" />
-    <meta property="og:description" content="Take the wheel in our collection of unblocked car and racing games featuring drifts, stunts, and speed trials you can play anywhere." />
-    <meta property="og:url" content="https://stickdefendersunblocked.github.io/categogy/Car.html" />
-    <meta property="og:image" content="https://stickdefendersunblocked.github.io/favicon.png" />
-    <meta property="og:locale" content="en_GB" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Car & Racing Games - StickDefendersUnblocked" />
-    <meta name="twitter:description" content="Take the wheel in our collection of unblocked car and racing games featuring drifts, stunts, and speed trials you can play anywhere." />
-    <meta name="twitter:image" content="https://stickdefendersunblocked.github.io/favicon.png" />
-    <meta name="twitter:url" content="https://stickdefendersunblocked.github.io/categogy/Car.html" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,22 +25,6 @@
     />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5130254389782226"
      crossorigin="anonymous"></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Car & Racing Games - StickDefendersUnblocked",
-        "url": "https://stickdefendersunblocked.github.io/categogy/Car.html",
-        "description": "Take the wheel in our collection of unblocked car and racing games featuring drifts, stunts, and speed trials you can play anywhere.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "StickDefendersUnblocked",
-          "url": "https://stickdefendersunblocked.github.io"
-        }
-      }
-    </script>
-
   </head>
 
   <body>
@@ -312,18 +282,22 @@
                   </div>
                 </div>
                                <!-- text-content start -->
-                <div id="content-container">
-                  <h1>Unblocked Car & Racing Games</h1>
-                  <p class="lead">From precision parking challenges to high-speed drifting, this garage is tuned for players who crave asphalt action without downloads.</p>
-                  <h2>What You'll Find</h2>
-                  <ul>
-                    <li>Master the controls of stunt cars, bikes, and trucks built for browser play.</li>
-                    <li>Compete for the fastest times while unlocking new vehicles and upgrades.</li>
-                    <li>Enjoy responsive HTML5 racers that work smoothly on school Chromebooks and mobile devices.</li>
-                  </ul>
-                  <h2>Why Play Here</h2>
-                  <p>Strap in and explore every car title on StickDefendersUnblocked to find your perfect ride.</p>
-                </div>
+                <div id="content-container"></div>
+                <script>
+                  fetch('content.html')
+                      .then(response => {
+                          if (!response.ok) {
+                              throw new Error('Network response was not ok');
+                          }
+                          return response.text();
+                      })
+                      .then(html => {
+                          document.getElementById('content-container').innerHTML = html;
+                      })
+                      .catch(error => {
+                          console.error('Error loading content:', error);
+                      });
+              </script>
                 <!-- text-content end -->
               </div>
             </div>
