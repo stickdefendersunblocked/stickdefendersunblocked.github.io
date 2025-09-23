@@ -1,4 +1,61 @@
 $(document).ready(function () {
+        const analyticsConfig = {
+                gtagId: "G-02ZWQPBW96",
+                clarityId: "tfd980bvug",
+        };
+
+        const ensureAnalyticsLoaded = () => {
+                const { gtagId, clarityId } = analyticsConfig;
+                const gtagSrc = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
+
+                if (!document.querySelector(`script[src="${gtagSrc}"]`)) {
+                        const gtagScript = document.createElement("script");
+                        gtagScript.async = true;
+                        gtagScript.src = gtagSrc;
+                        const head = document.head || document.getElementsByTagName("head")[0];
+                        (head || document.body || document.documentElement).appendChild(gtagScript);
+                }
+
+                window.dataLayer = Array.isArray(window.dataLayer) ? window.dataLayer : [];
+                if (typeof window.gtag !== "function") {
+                        window.gtag = function () {
+                                window.dataLayer.push(arguments);
+                        };
+                }
+
+                const hasJsEvent = window.dataLayer.some(function (entry) {
+                        return Array.isArray(entry) && entry[0] === "js";
+                });
+                if (!hasJsEvent) {
+                        window.gtag("js", new Date());
+                }
+
+                const hasConfigEvent = window.dataLayer.some(function (entry) {
+                        return Array.isArray(entry) && entry[0] === "config" && entry[1] === gtagId;
+                });
+                if (!hasConfigEvent) {
+                        window.gtag("config", gtagId);
+                }
+
+                const claritySrc = `https://www.clarity.ms/tag/${clarityId}`;
+                const clarityLoaded = typeof window.clarity === "function" || document.querySelector(`script[src="${claritySrc}"]`);
+
+                if (!clarityLoaded) {
+                        (function (c, l, a, r, i, t, y) {
+                                c[a] = c[a] || function () {
+                                        (c[a].q = c[a].q || []).push(arguments);
+                                };
+                                t = l.createElement(r);
+                                t.async = 1;
+                                t.src = "https://www.clarity.ms/tag/" + i;
+                                y = l.getElementsByTagName(r)[0];
+                                y.parentNode.insertBefore(t, y);
+                        })(window, document, "clarity", "script", clarityId);
+                }
+        };
+
+        ensureAnalyticsLoaded();
+
         $(".icon-menu-mobile").on('click', function () {
                 $(".mobile-dropdown").slideToggle();
         });
